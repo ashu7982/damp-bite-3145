@@ -66,7 +66,7 @@
         #login > h3{
             margin-left: 160px;
         }
-        #login > form >button{
+        #login > form > :nth-child(2){
             display: block;
             margin: auto;
             margin-bottom: 20px;
@@ -103,10 +103,168 @@
         </div>
         <h3>Sign up to view your profile</h3>
         <form action="">
-            <input type="number" name="" id="" placeholder="Phone Number">
-             <button>Continue</button>
+            <input type="number" name="" id="" placeholder="Phone Number" id="inp">
+            <input type="submit" value="Submit" />
         </form>
         
     </div>
 </body>
+<script>
+    let inpulEl=document.querySelector('form > input');
+    let formEl=document.querySelector('form');
+    // let button=document.querySelector('button')
+    // console.log( inpulEl.value.length)
+     let mine=inpulEl.value
+    formEl.addEventListener('submit',(e)=>{
+        e.preventDefault();
+        
+        // console.log( inpulEl.value.length)
+
+        if(inpulEl.value.length<10 || inpulEl.value.length>10){
+            alert('Incorrect Mobile Number')
+        }
+        else if(inpulEl.value.length==10){
+            alert('Login Successful')
+        }
+    })
+</script>
 </html>
+
+
+
+<!-- [
+{
+    'name':'Men',
+    'img':'https://images.meesho.com/images/products/67346473/bpzxe_400.webp',
+    'price':'460',
+    'id':'1',
+    'Reviews':'595',
+},
+{
+    'name':'Men',
+    'img':'https://images.meesho.com/images/products/106849687/r5hyv_400.webp',
+    'price':'400',
+    'id':'1',
+    'Reviews':'6059',
+},
+{
+    'name':'Men',
+    'img':'https://images.meesho.com/images/products/106265043/ubgql_400.webp',
+    'price':'700',
+    'id':'1',
+    'Reviews':'59',
+},
+{
+    'name':'Men',
+    'img':'https://images.meesho.com/images/products/132715677/amkqb_400.webp',
+    'price':'4500',
+    'id':'1',
+    'Reviews':'59',
+},
+{
+    'name':'Men',
+    'img':'https://images.meesho.com/images/products/50754822/yyxp4_400.webp',
+    'price':'800',
+    'id':'1',
+    'Reviews':'6000',
+},
+{
+    'name':'Men',
+    'img':'https://images.meesho.com/images/products/67346473/bpzxe_400.webp',
+    'price':'250',
+    'id':'1',
+    'Reviews':'689',
+},
+{
+    'name':'Men',
+    'img':'https://images.meesho.com/images/products/67346473/bpzxe_400.webp',
+    'price':'550',
+    'id':'1',
+    'Reviews':'559',
+},
+{
+    'name':'Men',
+    'img':'phttps://images.meesho.com/images/products/151229677/jtogr_400.webp',
+    'price':'2200',
+    'id':'1',
+    'Reviews':'959',
+},
+{
+    'name':'Men',
+    'img':'https://images.meesho.com/images/products/67346473/bpzxe_400.webp',
+    'price':'750',
+    'id':'1',
+    'Reviews':'958',
+},   
+
+
+
+
+
+{
+    'name':'kids',
+    'img':'https://images.meesho.com/images/products/51135376/lpzdj_400.webp',
+    'price':'460',
+    'id':'1',
+    'Reviews':'595',
+},
+{
+    'name':'Kids',
+    'img':'https://images.meesho.com/images/products/84294025/qmmto_400.webp',
+    'price':'400',
+    'id':'1',
+    'Reviews':'6059',
+},
+{
+    'name':'Kids',
+    'img':'https://images.meesho.com/images/products/84668648/wfuze_400.webp',
+    'price':'700',
+    'id':'1',
+    'Reviews':'59',
+},
+{
+    'name':'Kids',
+    'img':'https://images.meesho.com/images/products/49726123/xcv01_400.webp',
+    'price':'4500',
+    'id':'1',
+    'Reviews':'59',
+},
+{
+    'name':'Kids',
+    'img':'https://images.meesho.com/images/products/37346162/0h0gy_400.webp',
+    'price':'800',
+    'id':'1',
+    'Reviews':'6000',
+},
+{
+    'name':'Kids',
+    'img':'https://images.meesho.com/images/products/52027155/kz261_400.webp',
+    'price':'250',
+    'id':'1',
+    'Reviews':'689',
+},
+{
+    'name':'Kids',
+    'img':'https://images.meesho.com/images/products/30366962/dolzu_400.webp',
+    'price':'550',
+    'id':'1',
+    'Reviews':'559',
+},
+{
+    'name':'Kids',
+    'img':'https://images.meesho.com/images/products/154230520/8sf1q_400.webp',
+    'price':'2200',
+    'id':'1',
+    'Reviews':'959',
+},
+{
+    'name':'Kids',
+    'img':'https://images.meesho.com/images/products/86192630/wivfe_400.webp',
+    'price':'750',
+    'id':'1',
+    'Reviews':'958',
+},
+
+
+
+] -->

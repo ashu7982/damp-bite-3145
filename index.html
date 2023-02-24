@@ -236,6 +236,10 @@
       #dropdown:hover #drop-cont{
         display: block;
       }
+      /* #text{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+      } */
     </style>
 </head>
 <body>
@@ -314,8 +318,8 @@
             </div>
         </div>
             <p>Women Western</p>
-            <p>Men</p>
-            <p>Kids</p>
+            <p id="men">Men</p>
+            <p id="kid">Kids</p>
             <p>Home & Kitchen</p>
             <p>Beauty and Health</p>
             <p>Jewellery & Accessories</p>
@@ -326,6 +330,8 @@
        <div id="drop">
 
        </div>
+
+       <div id="text">
         <div id="big">
             <div id="left">
               <div id="low">
@@ -405,5 +411,7 @@
            <img src="https://images.meesho.com/images/pow/playstoreIcon.webp" alt="">
            <img src="https://images.meesho.com/images/pow/appstoreIcon.webp" alt="">
         </div>
+    </div>
 </body>
+<script src="/fetch.js"></script>
 </html>
