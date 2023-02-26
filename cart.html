@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+#nav{
+            
+            display: flex;
+            justify-content: space-around;
+            /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+            height: 50%;
+            align-items: center;
+}
+#nav > div  p{
+            font-size: 20px;
+            cursor: pointer;
+        }
+        #nav > img{
+            height: 90px;
+           padding-left: 20px;
+        }
+        #nav > div > input{
+              width:  300px;
+              height: 50px;
+              margin-top: 10px;
+        }
+        #nav > div > a{
+            color: rgb(244, 51, 151);
+            /* text-decoration: none;
+            font-size: 40px; */
+        }
+        #pock{
+            text-decoration: none;
+            font-size: 40px;
+            font-weight: 20px;
+        }
+        #nav > a{
+            font-size: 20px;
+            text-decoration: none;
+            color: black;
+        }
+        #download{
+            width: 40%;
+            display: flex;
+            justify-content: center;
+            justify-content: space-around;
+            font-size: 20px;
+        }
+        #logo{
+        display: flex;
+        width: 40%;
+        justify-content: space-around;
+        margin-left: 0px;
+      }
+      #download > a{
+        text-decoration: none;
+        margin-top: 20px;
+        color: black;
+      }
+      #download > a:hover{
+        color: rgb(244, 51, 151);
+      }
+      .line{
+            width: 1px;
+            height: 40px;
+            background-color: grey;
+        }
+
+        #show{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap:20px;
+        }
+        #show > div > img{
+            width: 100%;
+        }
+        #show > div > button{
+        margin-left: 90px;
+        margin-bottom: 20px;
+        width: 80px;
+        height: 40px;
+        border: none;;
+        background-color:rgb(244, 51, 151) ;
+        color: whitesmoke;
+        }
+
+
+        #total{
+            width: 50%;
+            margin: auto;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="nav">
+        <!-- <img src="/logo/Screenshot (22).png" alt=""> -->
+        <div id="logo">
+            <a id="pock" href="/index.html">Pocket shop</a>
+        <input type="text" placeholder="Try Saree, Kurti or Search by Product Code">
+         </div>
+        <div id="download">
+        <p>Download App</p>
+        <p class="line"></p>
+        <p>Become a Supplier</p>
+         <p class="line"></p>
+        <a href="/profile.html">Profile</a>
+        <!-- <a href="/cart.html">Cart</a> -->
+    </div>
+    </div>
+    <hr>
+
+<div id="total">
+    <h3>Price Details</h3>
+    <p>Total Product Price <span id="tot">0</span></p>
+    <hr>
+    <h3>Order Total  <span class="tot">0</span></h3>
+    <p>Clicking on 'Continue' will not deduct any money</p>
+    <button>Continue</button>
+</div>
+
+<!-- <div -->
+
+
+
+    <div id="show"></div>
+</body>
+
+
+
+<script>
+let total=0;
+let over=JSON.parse(localStorage.getItem('cart')) || []
+let div=document.getElementById('show');
+
+// let sum=0;
+
+
+// let total=0;
+display(over)
+
+
+function display(data){
+    total=0;
+    data.forEach((ele)=>{
+        
+        let div2=document.createElement('div');
+        let image=document.createElement('img');
+        let price=document.createElement('h3');
+        let review=document.createElement('p');
+        let button=document.createElement('button');
+
+        image.src=ele.img;
+        price.textContent=ele.price;
+        review.textContent=ele.Reviews;
+        button.textContent='Remove';
+
+
+        
+        total=total+ele.price;
+        console.log(total)
+        // sums.textContent=sum
+
+      button.addEventListener('click',()=>{
+    
+      let check=over.filter((element)=>{
+        if(element.price==ele.price){
+            return false;
+        }
+        else{
+            return true;
+        }
+      })
+    
+      over=check;
+      localStorage.setItem('cart',JSON.stringify(over))
+       display(over)
+      })
+
+
+    //    div.style.display=grid;
+    //    div.style.gridTemplateColumns= 25% 25% 25% 25%
+
+    let spn=document.getElementById('tot')
+    spn.innerText=total;   
+
+        div2.append(image,price,review,button)
+        div.append(div2)
+    })
+
+}
+
+</script>
+</html>

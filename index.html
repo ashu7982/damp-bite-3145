@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pocket Shop</title>
+    <style>
+       
+        #nav{
+            
+            display: flex;
+            justify-content: space-around;
+            /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+            height: 50%;
+            align-items: center;
+        }
+        #nav > div  p{
+            font-size: 20px;
+            cursor: pointer;
+        }
+        #nav > img{
+            height: 90px;
+           padding-left: 20px;
+        }
+        #nav > div > input{
+              width:  300px;
+              height: 50px;
+              margin-top: 10px;
+        }
+        #nd{
+            
+            display: flex;
+            justify-content: space-around;
+            /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+            height: 50%;
+            align-items: center;
+            margin-top: 8px;
+            font-size: 20px;
+        }
+        #nd > p:hover{
+            color: rgb(244, 51, 151);
+            text-decoration: underline;
+            cursor: pointer;
+            
+        }
+        #big{
+            display: flex;
+            margin: auto;
+            margin-left: 200px;
+            
+        }
+        #left{
+           
+            /* box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset; */
+            width: 500px;
+            margin-top: 50px;
+        }
+        #right{
+            /* box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset; */
+            margin-top: 50px;
+        }
+        #right > img{
+            width: 100%;
+            height: 100%;
+        }
+        #free{
+            display: flex;
+            justify-content: space-around;
+            padding-right: 190px;
+            font-size: 20px;
+        }
+        #free > img{
+            margin-left: 70px;
+            
+        }
+        #bottom{
+            width: 60%;
+            height: 50px;
+            background-color: rgb(244, 51, 151);
+            display: flex;
+            align-items: center;
+            padding-left: 30px;
+            padding-right: 30px;
+            justify-content: space-between;
+            color: rgb(255, 255, 255);
+    
+        }
+        #nav > div > h1{
+            color: rgb(244, 51, 151);
+        }
+        #low > span > h1{
+            font-size: 40px;
+        }
+        #top{
+            text-align: center;
+            font-size: 40px;
+            margin-top: 40px;
+        }
+        #three{
+            display: flex;
+            width: 80%;
+            height: 500px;
+            margin: auto;
+            margin-left: 170px;
+            justify-content: space-evenly;
+            background-image: url(https://images.meesho.com/images/marketing/1649759774600.jpg)
+        }
+        .two{
+            margin-top: 200px;
+        }.one{
+            margin-top: 40px;
+        } 
+        #play{
+            width: 80%;
+            
+            margin: auto;
+            margin-top: 50px;
+            margin-left: 160px;
+            background-image: url(https://images.meesho.com/images/marketing/1664343269674.jpg);
+            height: 450px;
+            justify-content: center;
+            align-items: center;
+        }
+        #lefts{
+            display: flex;
+            margin-left: 370px;
+           ;
+        }
+        #rights{
+            margin-top: 50px;
+            /* margin-bottom: 100px; */
+            justify-content: center;
+           padding-top:50px ;
+        }
+        #play > button{
+            /* margin-top: 220px; */
+            margin-left: 90px;
+            
+            width: 100px;
+            height: 50px;
+            font-size: 20px;
+            background-color: grey;
+            color: whitesmoke;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        #lefts > div{
+            margin: auto;
+            padding-bottom: 80px;
+        }
+        #lefts > div > button{
+            width: 100px;
+            height: 50px;
+            font-size: 15px;
+            cursor: pointer;
+            color: teal;
+            background-color: whitesmoke;
+            border: none;
+            margin-left: 50px;
+        }
+        #last{
+            width: 80%;
+            margin: auto;
+            margin-left: 160px;
+            height: 550px;
+            text-align: right;
+            
+            background-image: url(https://images.meesho.com/images/pow/downloadBannerDesktop.webp);
+        }
+        #last > h1,h2{
+            padding-right: 40px;
+            padding-top: 40px;
+        }
+        #last > h2{
+            color:rgb(85, 133, 248) ;
+            font-size: 40px;
+        }
+        #last > h1{
+            color:rgb(244, 51, 151) ;
+            font-size: 45px;
+        }
+        #last > img{
+            padding-right: 40px;
+            width: 190px;
+        }
+        #nav > a{
+            font-size: 20px;
+            text-decoration: none;
+            color: black;
+        }
+        #download{
+            width: 40%;
+            display: flex;
+            justify-content: center;
+            justify-content: space-around;
+            font-size: 20px;
+        }
+        .line{
+            width: 1px;
+            height: 40px;
+            background-color: grey;
+        }
+      #drop{
+        display: none;
+        position: absolute;
+
+      }
+      #logo{
+        display: flex;
+        width: 40%;
+        justify-content: space-around;
+        margin-left: 0px;
+      }
+      #download > a{
+        text-decoration: none;
+        margin-top: 20px;
+        color: black;
+      }
+      #download > a:hover{
+        color: rgb(244, 51, 151);
+      }
+      #dropdown{
+        position: relative;
+        display: inline-block;
+      }
+      #drop-cont{
+        display: none;
+        position: absolute;
+        
+      }
+      #drop-cont a{
+        text-decoration: none;
+      }
+      #dropdown:hover #drop-cont{
+        display: block;
+      }
+      /* #text{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+      } */
+      #men{
+        text-decoration: none;
+        font-size: 20px;
+        color: black;
+      }
+      #man a:hover{
+        color: rgb(244, 51, 151);
+      }
+    </style>
+</head>
+<body>
+    
+        <div id="nav">
+        <!-- <img src="/logo/Screenshot (22).png" alt=""> -->
+        <div id="logo">
+        <h1>Pocket shop</h1>
+        <input type="text" placeholder="Try Saree, Kurti or Search by Product Code">
+         </div>
+        <div id="download">
+        <p>Download App</p>
+        <p class="line"></p>
+        <p>Become a Supplier</p>
+         <p class="line"></p>
+        <a href="/profile.html">Profile</a>
+       <a href="/cart.html">Cart</a>
+    </div>
+    </div>
+    <hr>
+        <div id="nd">
+            <div id="dropdown">
+            <p class="do">Women Ethnic</p>
+            <div id="drop-cont">
+                <table>
+                    <thead>
+                        <tr>
+                            <td><a href="">All Women Ethnic</a></td>
+                            <td><a href="">Sarees</a></td>
+                            <td><a href="">Kurtis</a></td>
+                            <td><a href="">Kurts Sets</a></td>
+                            <td><a href="">Suits & Dress Material</a></td>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td><a href="">View All</a></td>
+                        <td><a href="">All Sarees</a></td>
+                        <td><a href="">All Kurtis</a></td>
+                        <td><a href="">All Kurta sets</a></td>
+                        <td><a href="">All Suits & Dress Material</a></td>
+                        <!-- <td><a href="">All Suits & Dress Material</a></td> -->
+                    </tr>
+                    <tr>
+                        <td><a href=""></a></td>
+                        <td><a href="">Silk Sarees</a></td>
+                        <td><a href="">Anarkali Kurtis</a></td>
+                        <td><a href=""></a></td>
+                        <td><a href="">Cotton Suits</a></td>
+                        <!-- <td><a href="">All Suits & Dress Material</a></td> -->
+                    </tr>
+                    <tr>
+                        <td><a href=""></a></td>
+                        <td><a href=""> Cotton Silk Sarees</a></td>
+                        <td><a href="">Rayon Kurtis</a></td>
+                        <td><a href=""></a></td>
+                        <td><a href="">Embroidered Suits</a></td>
+                        <!-- <td><a href="">All Suits & Dress Material</a></td> -->
+                    </tr>
+                    <tr>
+                        <td><a href=""></a></td>
+                        <td><a href=""> Cotton Sarees</a></td>
+                        <td><a href="">Cotton Kurtis</a></td>
+                        <td><a href=""></a></td>
+                        <td><a href="">Chanderi Suits</a></td>
+                        <!-- <td><a href="">All Suits & Dress Material</a></td> -->
+                    </tr>
+                    <tr>
+                        <td><a href=""></a></td>
+                        <td><a href=""> Georgette Sarees</a></td>
+                        <td><a href=""></a></td>
+                        <td><a href=""></a></td>
+                        <td><a href=""></a></td>
+                        <!-- <td><a href="">All Suits & Dress Material</a></td> -->
+                    </tr>
+                </table>
+            </div>
+        </div>
+            <p>Women Western</p>
+            <a id="men" href="/product.html">Men</a>
+            <p id="kid">Kids</p>
+            <p>Home & Kitchen</p>
+            <p>Beauty and Health</p>
+            <p>Jewellery & Accessories</p>
+            <p>Bags & Footwear</p>
+            <p>Electronics</p>
+        </div>
+        <hr>
+       <div id="drop">
+
+       </div>
+
+       <div id="text">
+        <div id="big">
+            <div id="left">
+              <div id="low">
+                <span><h1>Lowest Prices <br> Best Quality Shopping</h1></span>
+              </div>
+
+              <div id="free">
+                  <img src="https://images.meesho.com/images/pow/freeDelivery.svg" alt="">
+                  <span>
+                <p>Free <br> Delivery</p>
+               </span>
+               <img src="https://images.meesho.com/images/pow/cod.svg" alt="">
+               <span>
+                <p>Cash on <br> Delivery</p>
+               </span>
+               <img src="https://images.meesho.com/images/pow/easyReturns.svg" alt="">
+               <span>
+                <p>Easy <br> Returns</p>
+               </span>
+            </div>
+               <div id="bottom">
+                <span><img src="https://images.meesho.com/images/pow/playstoreSmallIcon.webp" alt="">
+                </span>
+                <h3>Download the Pocket shop App</h3>
+                
+               </div>
+              
+
+
+
+            </div>
+            <div id="right">
+                <img src="https://images.meesho.com/images/marketing/1631722939962.webp" alt="">
+            </div>
+        </div>
+    
+
+        <h1 id="top">Top Categories to  choose from</h1>
+
+        <div id="three">
+            <div class="one">
+                <img src="https://images.meesho.com/images/marketing/1649760442043.webp" alt="">
+            </div>
+            <div class="two">
+                <img src="https://images.meesho.com/images/marketing/1649760423313.webp" alt="">
+            </div>
+            <div class="two">
+                <img src="https://images.meesho.com/images/marketing/1649759799809.webp" alt="">
+            </div>
+        </div>
+
+        <div id="play">
+            
+               
+                <button>View All</button>
+            
+            <div id="lefts">
+                <div>
+                    <img src="https://images.meesho.com/images/marketing/1649760808952.webp" alt="">
+                    <button>Beauty</button>
+                </div>
+                <div>
+                    <img src="https://images.meesho.com/images/marketing/1649760703179.webp" alt="">
+                    <button>Home</button>
+                </div>
+                <div>
+                    <img src="https://images.meesho.com/images/marketing/1649760786763.webp" alt="">
+                    <button>Electronics</button>
+                </div>
+            </div>
+           
+        </div>
+
+        <div id="last">
+           <h2>Become a Reseller and</h2>
+           <h1>Start your Online Business <br> &nbsp; &nbsp; &nbsp; with Zero Investment</h1>
+           <img src="https://images.meesho.com/images/pow/playstoreIcon.webp" alt="">
+           <img src="https://images.meesho.com/images/pow/appstoreIcon.webp" alt="">
+        </div>
+    </div>
+</body>
+<script src="/fetch.js"></script>
+</html>
